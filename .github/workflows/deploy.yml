@@ -1,0 +1,4 @@
+# Nombre del flujo de trabajo
+name: Deploy to GitHub Pages
+
+# Se ejecuta cada vez que haces un push a la rama 'master'

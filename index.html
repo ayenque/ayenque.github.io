@@ -1,13 +1,727 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Angelo Yenque</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Angelo Paul Yenque Tume - Coordinador de Investigación, Desarrollo & T.I. Ingeniero de Sistemas especializado en SAP, Business Intelligence y análisis de datos.">
+    <meta name="author" content="Angelo Paul Yenque Tume">
+    <meta name="keywords" content="Angelo Yenque, Ingeniero de Sistemas, SAP Business One, Power BI, Business Intelligence, Análisis de Datos">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Angelo Paul Yenque Tume - Coordinador de Investigación, Desarrollo & T.I.">
+    <meta property="og:description" content="Ingeniero de Sistemas especializado en SAP, Business Intelligence y análisis de datos.">
+    <meta property="og:url" content="https://ayenque.me">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Angelo Yenque">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Angelo Paul Yenque Tume">
+    <meta name="twitter:description" content="Coordinador de Investigación, Desarrollo & T.I.">
+    
+    <title>Angelo Paul Yenque Tume</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    <style>
+        :root {
+            --color-bg: #0f172a;
+            --color-bg-secondary: #1e293b;
+            --color-text-primary: #e2e8f0;
+            --color-text-secondary: #94a3b8;
+            --color-text-muted: #64748b;
+            --color-accent: #10b981;
+            --color-accent-light: #34d399;
+            --color-accent-dark: #059669;
+            --color-border: #334155;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--color-bg);
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .spotlight {
+            position: fixed;
+            inset: 0;
+            background: radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(16, 185, 129, 0.15), transparent 80%);
+            pointer-events: none;
+            z-index: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            min-height: 100vh;
+        }
+
+        .layout {
+            display: flex;
+            gap: 2rem;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            flex: 0 0 45%;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 6rem 0;
+            z-index: 2;
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 6rem 0;
+            z-index: 2;
+        }
+
+        .profile-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+            line-height: 1.1;
+        }
+
+        .profile-header h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .profile-header p {
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            max-width: 300px;
+        }
+
+        .navigation {
+            list-style: none;
+            margin: 2rem 0;
+        }
+
+        .navigation li {
+            margin-bottom: 0.75rem;
+        }
+
+        .navigation a {
+            display: flex;
+            align-items: center;
+            padding: 0.75rem 0;
+            text-decoration: none;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.2s ease;
+        }
+
+        .navigation a::before {
+            content: '';
+            width: 2rem;
+            height: 1px;
+            background-color: var(--color-text-muted);
+            margin-right: 1rem;
+            transition: all 0.2s ease;
+        }
+
+        .navigation a:hover,
+        .navigation a.active {
+            color: var(--color-text-primary);
+        }
+
+        .navigation a:hover::before,
+        .navigation a.active::before {
+            width: 4rem;
+            background-color: var(--color-text-primary);
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--color-text-muted);
+            transition: color 0.2s ease;
+            font-size: 1.5rem;
+        }
+
+        .social-links a:hover {
+            color: var(--color-text-primary);
+        }
+
+        .section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 6rem;
+        }
+
+        .section-header {
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.75);
+            backdrop-filter: blur(10px);
+            padding: 1.25rem 0;
+            margin-bottom: 1rem;
+            z-index: 10;
+        }
+
+        .section-title {
+            font-size: 0.875rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--color-text-primary);
+        }
+
+        .section-content {
+            position: relative;
+        }
+
+        .section h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .section p {
+            margin-bottom: 1rem;
+        }
+
+        .experience-item {
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            gap: 1rem;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+            margin-bottom: 3rem;
+        }
+
+        .experience-item:hover {
+            background-color: rgba(30, 41, 59, 0.5);
+            box-shadow: 0 10px 30px -15px rgba(16, 185, 129, 0.1);
+        }
+
+        .experience-date {
+            font-size: 0.875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            color: var(--color-text-muted);
+            letter-spacing: 0.05em;
+        }
+
+        .experience-content h4 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-content h5 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--color-accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-content p {
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 0.75rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background-color: rgba(16, 185, 129, 0.1);
+            color: var(--color-accent-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .skills-category h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 1rem;
+        }
+
+        .skills-list {
+            list-style: none;
+        }
+
+        .skills-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--color-border);
+        }
+
+        .skills-list li:last-child {
+            border-bottom: none;
+        }
+
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.75rem;
+        }
+
+        .contact-info a {
+            color: var(--color-accent-light);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--color-accent);
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .layout {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                position: static;
+                height: auto;
+                padding: 3rem 0;
+                text-align: center;
+            }
+
+            .main-content {
+                padding: 3rem 0;
+            }
+
+            .profile-header h1 {
+                font-size: 2.5rem;
+            }
+
+            .navigation {
+                display: none;
+            }
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 16px;
+            }
+
+            .profile-header h1 {
+                font-size: 2rem;
+            }
+
+            .profile-header h2 {
+                font-size: 1.125rem;
+            }
+
+            .section {
+                margin-bottom: 4rem;
+            }
+
+            .experience-item {
+                padding: 1rem;
+            }
+        }
+
+        /* Hide section headers on larger screens where sticky nav is visible */
+        @media (min-width: 1025px) {
+            .section-header {
+                opacity: 0;
+                position: relative;
+                top: auto;
+                background: none;
+                backdrop-filter: none;
+            }
+        }
+    </style>
 </head>
 <body>
-    <h1>Este es un sitio web con Github Pages</h1>
-    <p>Esto es un test para el curso de Git y Github</p>
-    <p><img src="https://media.giphy.com/media/3og0IPTm2lVadiIaQw/giphy.gif"</p>
+    <div class="spotlight"></div>
+    
+    <div class="container">
+        <div class="layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="profile-header">
+                    <h1>Angelo Paul Yenque Tume</h1>
+                    <h2>Coordinador de Investigación, Desarrollo & T.I.</h2>
+                    <p>Transformo datos en ideas accionables combinando pensamiento analítico con creatividad.</p>
+                    
+                    <nav>
+                        <ul class="navigation">
+                            <li><a href="#about" class="nav-link active">Sobre mí</a></li>
+                            <li><a href="#experience" class="nav-link">Experiencia</a></li>
+                            <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                            <li><a href="#education" class="nav-link">Formación</a></li>
+                            <li><a href="#contact" class="nav-link">Contacto</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                
+                <div class="social-links">
+                    <a href="mailto:hi@ayenque.me" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.89 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ayenque" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.3 6.5a1.78 1.78 0 01-1.8 1.75zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93A1.74 1.74 0 0013 14.19a.66.66 0 000 .14V19h-3v-9h2.9v1.3a3.11 3.11 0 012.7-1.4c1.55 0 3.36.86 3.36 3.66z"/>
+                        </svg>
+                    </a>
+                </div>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <!-- About Section -->
+                <section id="about" class="section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">Sobre mí</h2>
+                    </div>
+                    <div class="section-content">
+                        <p>Soy <strong>Ingeniero de Sistemas</strong> de la Universidad Peruana de Ciencias Aplicadas, con una sólida base en <strong>Ingeniería Industrial</strong> de la UNMSM. Mi carrera profesional me ha permitido desarrollar una gran experiencia en administración de bases de datos, sistemas de información e inteligencia de negocios. Me apasiona transformar datos en ideas accionables, ya sea a través de estudios de mercado, análisis comercial o gestión logística.</p>
+                        
+                        <p>Mi enfoque combina el <strong>pensamiento analítico</strong> con la <strong>creatividad</strong>. Me dedico a la planificación, la satisfacción del cliente y la mejora continua. Creo en una <strong>mentalidad de crecimiento</strong> y siempre tomo la iniciativa para aprender e innovar. Esta motivación me ha permitido destacar en roles que exigen una meticulosa atención al detalle y una perspectiva de futuro.</p>
+                    </div>
+                </section>
+
+                <!-- Experience Section -->
+                <section id="experience" class="section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">Experiencia</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="experience-date">Agosto 2020 — Hoy</div>
+                            <div class="experience-content">
+                                <h4>Coordinador de Investigación, Desarrollo & T.I.</h4>
+                                <h5>Reno Químicos Perú - Irabazle Perú</h5>
+                                <p>Lidero el análisis de estadísticas de importación y exportación para operaciones en Perú, Chile, Argentina y Paraguay. Realizo estudios profundos de sectores industriales, rendimiento de productos, comportamiento de clientes y análisis de competencia para decisiones estratégicas y nuevas oportunidades de mercado.</p>
+                                <p>Gestiono integralmente <strong>SAP Business One</strong>, implementando nuevas funcionalidades para optimizar procesos de negocio. Desarrollo informes de gestión con <strong>Crystal Reports</strong> y automatizo informes de ventas, control de inventarios y análisis financiero con métricas clave como YOY, YTD y MTD.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">SAP Business One</span>
+                                    <span class="tech-tag">Crystal Reports</span>
+                                    <span class="tech-tag">Microsoft SQL Server</span>
+                                    <span class="tech-tag">Power BI</span>
+                                    <span class="tech-tag">Business Intelligence</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Octubre 2013 — Mayo 2020</div>
+                            <div class="experience-content">
+                                <h4>Jefe de Investigación, Desarrollo & T.I.</h4>
+                                <h5>Corporación GTM del Perú S.A.</h5>
+                                <p>Lideré la implementación de proyectos de <strong>Microsoft Dynamics CRM</strong> y S&OP en Perú, capacitando al equipo comercial. Fui nombrado "Superusuario Líder" para implementaciones en Ecuador y Colombia, apoyando también en Costa Rica y Guatemala.</p>
+                                <p>Coordiné el costeo de productos mediante análisis de importaciones, stocks, ventas y precios de mercado. Desarrollé herramientas para segmentación de clientes y seguimiento de ventas, asegurando el funcionamiento óptimo de todos los sistemas.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Microsoft Dynamics CRM</span>
+                                    <span class="tech-tag">S&OP</span>
+                                    <span class="tech-tag">QlikView</span>
+                                    <span class="tech-tag">SQL Server</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Febrero 2013 — Octubre 2013</div>
+                            <div class="experience-content">
+                                <h4>Analista de Control de Gestión</h4>
+                                <h5>Corredores de Seguros Falabella</h5>
+                                <p>Responsable del cálculo y análisis de provisiones y reembolsos a compañías de seguros. Desarrollé y mantuve el "Tablero de Control" para seguimiento de indicadores de gestión y gestión del proceso de cierre de ventas para bancos, oficinas y tiendas a nivel nacional.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">Análisis de Datos</span>
+                                    <span class="tech-tag">Tableros de Control</span>
+                                    <span class="tech-tag">Excel Avanzado</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Octubre 2010 — Febrero 2013</div>
+                            <div class="experience-content">
+                                <h4>Analista de Business Intelligence</h4>
+                                <h5>Empresa Editora El Comercio</h5>
+                                <p>Consolidé ventas y desarrollé proyecciones de crecimiento de suscripciones. Analicé crecimiento y rotación de clientes, generando información de gestión y calculando comisiones. Creé sistemas automatizados y cuadros de mando en <strong>QlikView</strong> y <strong>Power BI</strong>.</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag">QlikView</span>
+                                    <span class="tech-tag">Power BI</span>
+                                    <span class="tech-tag">Business Intelligence</span>
+                                    <span class="tech-tag">Análisis Predictivo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section id="skills" class="section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">Habilidades</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="skills-grid">
+                            <div class="skills-category">
+                                <h4>Software Empresarial</h4>
+                                <ul class="skills-list">
+                                    <li>SAP Business One</li>
+                                    <li>Crystal Reports</li>
+                                    <li>Microsoft SQL Server</li>
+                                    <li>Power BI</li>
+                                    <li>QlikView</li>
+                                    <li>SAP S/4HANA</li>
+                                    <li>Siebel</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="skills-category">
+                                <h4>Lenguajes de Programación</h4>
+                                <ul class="skills-list">
+                                    <li>Python</li>
+                                    <li>DAX</li>
+                                    <li>Ruby</li>
+                                    <li>C++</li>
+                                    <li>JavaScript</li>
+                                    <li>SQL</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="skills-category">
+                                <h4>Suite de Office (Nivel Experto)</h4>
+                                <ul class="skills-list">
+                                    <li>Microsoft Excel</li>
+                                    <li>Access</li>
+                                    <li>Word</li>
+                                    <li>PowerPoint</li>
+                                    <li>Outlook</li>
+                                    <li>Office 365</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="skills-category">
+                                <h4>Desarrollo Web & Diseño</h4>
+                                <ul class="skills-list">
+                                    <li>WordPress</li>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>Canva</li>
+                                    <li>Fruity Loops</li>
+                                    <li>Camtasia</li>
+                                    <li>Sony Vegas</li>
+                                    <li>Adobe Premiere</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Education Section -->
+                <section id="education" class="section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">Formación</h2>
+                    </div>
+                    <div class="section-content">
+                        <div class="experience-item">
+                            <div class="experience-date">Título Principal</div>
+                            <div class="experience-content">
+                                <h4>Ingeniería de Sistemas</h4>
+                                <h5>Universidad Peruana de Ciencias Aplicadas</h5>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Formación Base</div>
+                            <div class="experience-content">
+                                <h4>Ingeniería Industrial</h4>
+                                <h5>Universidad Nacional Mayor de San Marcos</h5>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Especialización</div>
+                            <div class="experience-content">
+                                <h4>Diplomado en SAP Integral</h4>
+                                <h5>Prime Institute</h5>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Certificación</div>
+                            <div class="experience-content">
+                                <h4>QlikView Professional V11</h4>
+                                <h5>QlikSoft S.A.C.</h5>
+                            </div>
+                        </div>
+
+                        <div class="experience-item">
+                            <div class="experience-date">Técnico</div>
+                            <div class="experience-content">
+                                <h4>Administración de Base de Datos SQL Server</h4>
+                                <h5>Instituto Cibertec</h5>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Contact Section -->
+                <section id="contact" class="section fade-in">
+                    <div class="section-header">
+                        <h2 class="section-title">Contacto</h2>
+                    </div>
+                    <div class="section-content">
+                        <p>¿Interesado en colaborar o tienes alguna consulta? No dudes en contactarme.</p>
+                        <div class="contact-info">
+                            <p><strong>Email:</strong> <a href="mailto:hi@ayenque.me">hi@ayenque.me</a></p>
+                            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/ayenque" target="_blank" rel="noopener noreferrer">linkedin.com/in/ayenque</a></p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Mouse spotlight effect
+        document.addEventListener('mousemove', (e) => {
+            const spotlight = document.querySelector('.spotlight');
+            spotlight.style.setProperty('--mouse-x', e.clientX + 'px');
+            spotlight.style.setProperty('--mouse-y', e.clientY + 'px');
+        });
+
+        // Smooth scrolling and active navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('.section');
+
+        function updateActiveNav() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        // Scroll event listener
+        window.addEventListener('scroll', updateActiveNav);
+
+        // Smooth scroll for navigation links
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetId = link.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Initial call to set active nav
+        updateActiveNav();
+    </script>
 </body>
 </html>
