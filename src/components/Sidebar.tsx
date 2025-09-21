@@ -8,7 +8,7 @@ export function Sidebar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['about', 'experience', 'projects']
+      const sections = ['about', 'experience', 'skills', 'education']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
@@ -40,13 +40,13 @@ export function Sidebar() {
     <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24 relative z-10">
       <div>
         <h1 className="text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl">
-          <a href="/">Angelo Yenque</a>
+          <a href="/">Angelo Paul Yenque</a>
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-slate-200 sm:text-xl">
-          Desarrollador Full Stack
+          Coordinador de Investigación, Desarrollo & T.I.
         </h2>
         <p className="mt-4 max-w-xs leading-normal text-slate-400">
-          Apasionado por crear experiencias digitales excepcionales con tecnologías modernas.
+          Ingeniero especializado en Business Intelligence, análisis de datos y gestión de sistemas empresariales.
         </p>
         
         <div className="flex items-center mt-4 text-slate-400">
@@ -59,7 +59,8 @@ export function Sidebar() {
             {[
               { id: 'about', label: 'Acerca de mí' },
               { id: 'experience', label: 'Experiencia' },
-              { id: 'projects', label: 'Proyectos' }
+              { id: 'skills', label: 'Habilidades' },
+              { id: 'education', label: 'Formación' }
             ].map((item) => (
               <li key={item.id}>
                 <button
@@ -113,7 +114,20 @@ export function Sidebar() {
         <li className="mr-5 text-xs">
           <a
             className="block hover:text-slate-200 transition-colors"
-            href="mailto:ayenque@gmail.com"
+            href="https://twitter.com/ayenquet"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Twitter (opens in a new tab)"
+          >
+            <svg className="h-6 w-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+        </li>
+        <li className="mr-5 text-xs">
+          <a
+            className="block hover:text-slate-200 transition-colors"
+            href="mailto:hi@ayenque.me"
             aria-label="Email"
           >
             <Mail className="h-6 w-6" />

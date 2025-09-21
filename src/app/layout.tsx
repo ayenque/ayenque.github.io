@@ -5,23 +5,24 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Angelo Yenque - Desarrollador Full Stack',
-  description: 'Portfolio de Angelo Yenque, Desarrollador Full Stack especializado en React, Node.js, y desarrollo web moderno.',
-  keywords: 'Angelo Yenque, desarrollador full stack, React, Node.js, JavaScript, TypeScript, desarrollo web',
-  authors: [{ name: 'Angelo Yenque' }],
-  creator: 'Angelo Yenque',
+  title: 'Angelo Paul Yenque - Coordinador de Investigación, Desarrollo & T.I.',
+  description: 'Portfolio de Angelo Paul Yenque, Ingeniero de Sistemas especializado en Business Intelligence, análisis de datos y gestión de sistemas empresariales.',
+  keywords: 'Angelo Yenque, Business Intelligence, SAP Business One, Power BI, QlikView, análisis de datos, sistemas empresariales, coordinador TI',
+  authors: [{ name: 'Angelo Paul Yenque' }],
+  creator: 'Angelo Paul Yenque',
   openGraph: {
-    title: 'Angelo Yenque - Desarrollador Full Stack',
-    description: 'Portfolio de Angelo Yenque, Desarrollador Full Stack especializado en React, Node.js, y desarrollo web moderno.',
+    title: 'Angelo Paul Yenque - Coordinador de Investigación, Desarrollo & T.I.',
+    description: 'Portfolio de Angelo Paul Yenque, Ingeniero de Sistemas especializado en Business Intelligence, análisis de datos y gestión de sistemas empresariales.',
     url: 'https://ayenque.me',
-    siteName: 'Angelo Yenque Portfolio',
+    siteName: 'Angelo Paul Yenque Portfolio',
     locale: 'es_ES',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Angelo Yenque - Desarrollador Full Stack',
-    description: 'Portfolio de Angelo Yenque, Desarrollador Full Stack especializado en React, Node.js, y desarrollo web moderno.',
+    title: 'Angelo Paul Yenque - Coordinador de Investigación, Desarrollo & T.I.',
+    description: 'Portfolio de Angelo Paul Yenque, Ingeniero de Sistemas especializado en Business Intelligence, análisis de datos y gestión de sistemas empresariales.',
+    creator: '@ayenquet',
   },
   robots: {
     index: true,

@@ -11,33 +11,35 @@ interface ExperienceItem {
 
 const experiences: ExperienceItem[] = [
   {
-    period: "2022 — Presente",
-    title: "Senior Full Stack Developer",
-    company: "TechCorp Solutions",
-    description: "Lidero el desarrollo de aplicaciones web empresariales utilizando React, Node.js y PostgreSQL. Implementé arquitecturas escalables que mejoraron el rendimiento en un 40% y reduje los tiempos de carga significativamente.",
-    technologies: ["React", "TypeScript", "Node.js", "PostgreSQL", "AWS", "Docker"],
-    link: "https://techcorp.com"
+    period: "Agosto 2020 — Presente",
+    title: "Coordinador de Investigación, Desarrollo & T.I.",
+    company: "Reno Químicos Perú - Irabazle Perú",
+    description: "Lidero el análisis de estadísticas de importación y exportación para operaciones en Perú, Chile, Argentina y Paraguay. Gestiono integralmente SAP Business One, desarrollando nuevas funcionalidades y optimizando procesos. Automatizo informes de ventas, control de inventarios y análisis financiero, proporcionando métricas clave como YOY, YTD y MTD.",
+    technologies: ["SAP Business One", "Crystal Reports", "Microsoft SQL Server", "Power BI", "Python", "Business Intelligence"],
+    link: "https://www.reno-group.biz/"
   },
   {
-    period: "2021 — 2022",
-    title: "Full Stack Developer",
-    company: "Startup Innovadora",
-    description: "Desarrollé desde cero una plataforma de e-commerce utilizando Next.js y Stripe. Implementé funcionalidades de pago seguras, gestión de inventario y panel administrativo completo.",
-    technologies: ["Next.js", "React", "Express.js", "MongoDB", "Stripe", "Tailwind CSS"],
+    period: "Octubre 2013 — Mayo 2020",
+    title: "Jefe de Investigación, Desarrollo & T.I.",
+    company: "Corporación GTM del Perú S.A.",
+    description: "Lideré la implementación de Microsoft Dynamics CRM y S&OP en Perú, siendo nombrado 'Superusuario Líder' para implementaciones en Ecuador y Colombia. Coordiné el costeo de productos mediante análisis de importaciones, stocks y ventas. Desarrollé herramientas para segmentación de clientes y seguimiento de ventas.",
+    technologies: ["Microsoft Dynamics CRM", "SQL Server", "Crystal Reports", "QlikView", "Power BI", "Excel Avanzado"],
+    link: "https://www.caldic.com/es-pe/"
   },
   {
-    period: "2020 — 2021",
-    title: "Frontend Developer",
-    company: "Agencia Digital",
-    description: "Creé interfaces de usuario responsivas y optimizadas para múltiples clientes. Colaboré estrechamente con diseñadores UX/UI para implementar experiencias de usuario excepcionales.",
-    technologies: ["React", "JavaScript", "SASS", "WordPress", "Figma"],
+    period: "Febrero 2013 — Octubre 2013",
+    title: "Analista de Control de Gestión",
+    company: "Corredores de Seguros Falabella",
+    description: "Responsable del cálculo y análisis de provisiones y reembolsos a compañías de seguros. Desarrollé y mantuve el 'Tablero de Control' para seguimiento de indicadores de gestión. Gestioné procesos de cierre de ventas y cálculo de comisiones a nivel nacional.",
+    technologies: ["Excel Avanzado", "VBA", "SQL Server", "Tableros de Control", "Análisis Financiero"],
   },
   {
-    period: "2019 — 2020",
-    title: "Junior Developer",
-    company: "Empresa Local",
-    description: "Inicié mi carrera profesional desarrollando sitios web institucionales y aplicaciones internas. Aprendí las bases del desarrollo web y las mejores prácticas de la industria.",
-    technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+    period: "Octubre 2010 — Febrero 2013",
+    title: "Analista de Business Intelligence",
+    company: "Empresa Editora El Comercio",
+    description: "Consolidé ventas y desarrollé proyecciones de crecimiento de suscripciones. Analicé crecimiento y rotación de clientes, generando información de gestión y KPIs. Creé sistemas automatizados y dashboards en QlikView y Power BI para monitorear procesos de ventas, atención al cliente y recursos humanos.",
+    technologies: ["QlikView", "Power BI", "SQL Server", "Crystal Reports", "Excel", "Dashboards"],
+    link: "https://grupoelcomercio.com.pe/"
   }
 ]
 

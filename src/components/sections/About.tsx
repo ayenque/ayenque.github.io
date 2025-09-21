@@ -8,23 +8,26 @@ export function About() {
       </div>
       <div>
         <p className="mb-4 text-slate-400 leading-relaxed">
-          Soy un desarrollador full stack con más de 5 años de experiencia creando aplicaciones web modernas y escalables. 
-          Mi pasión por la tecnología me ha llevado a especializarme en el ecosistema de JavaScript, trabajando con 
-          <strong className="text-slate-200"> React</strong>, <strong className="text-slate-200">Node.js</strong>, 
-          y <strong className="text-slate-200">TypeScript</strong> para crear soluciones que combinan una excelente experiencia 
-          de usuario con arquitecturas robustas.
+          Soy <strong className="text-slate-200">Ingeniero de Sistemas</strong> de la Universidad Peruana de 
+          Ciencias Aplicadas, con una sólida base en <strong className="text-slate-200">Ingeniería Industrial</strong> de 
+          la UNMSM. Mi carrera profesional me ha permitido desarrollar una gran experiencia en 
+          <strong className="text-slate-200"> administración de bases de datos</strong>, 
+          <strong className="text-slate-200"> sistemas de información</strong> e 
+          <strong className="text-slate-200"> inteligencia de negocios</strong>. Me apasiona transformar datos en ideas 
+          accionables, ya sea a través de estudios de mercado, análisis comercial o gestión logística.
         </p>
         <p className="mb-4 text-slate-400 leading-relaxed">
-          Actualmente me enfoco en el desarrollo de aplicaciones empresariales, utilizando metodologías ágiles y las mejores 
-          prácticas de la industria. Tengo experiencia tanto en el frontend con frameworks modernos como 
-          <strong className="text-slate-200"> React</strong> y <strong className="text-slate-200">Next.js</strong>, 
-          como en el backend con <strong className="text-slate-200">Express.js</strong>, 
-          <strong className="text-slate-200"> NestJS</strong>, y bases de datos como 
-          <strong className="text-slate-200"> PostgreSQL</strong> y <strong className="text-slate-200">MongoDB</strong>.
+          Mi enfoque combina el <strong className="text-slate-200">pensamiento analítico</strong> con la 
+          <strong className="text-slate-200"> creatividad</strong>. Creo en una 
+          <strong className="text-slate-200"> mentalidad de crecimiento</strong> y siempre tomo la iniciativa para 
+          aprender e innovar. Esta motivación me ha permitido destacar en roles que exigen una meticulosa atención 
+          al detalle y una perspectiva de futuro.
         </p>
         <p className="text-slate-400 leading-relaxed">
-          Cuando no estoy programando, disfruto mantenerme actualizado con las últimas tendencias tecnológicas, 
-          contribuir a proyectos de código abierto, y compartir conocimientos con la comunidad de desarrolladores.
+          Actualmente me desempeño como <strong className="text-slate-200">Coordinador de Investigación, Desarrollo & T.I.</strong> 
+          en Reno Químicos Perú, donde lidero el análisis de estadísticas de importación y exportación para operaciones 
+          en múltiples países, gestiono sistemas <strong className="text-slate-200">SAP Business One</strong>, y desarrollo 
+          soluciones de <strong className="text-slate-200">Business Intelligence</strong> que optimizan los procesos empresariales.
         </p>
       </div>
     </section>
