@@ -1,7 +1,7 @@
-import { About } from './sections/About'
-import { Experience } from './sections/Experience'
-import { Skills } from './sections/Skills'
-import { Education } from './sections/Education'
+import { About } from "./sections/About";
+import { Experience } from "./sections/Experience";
+import { Skills } from "./sections/Skills";
+import { Education } from "./sections/Education";
 
 export function MainContent() {
   return (
@@ -11,5 +11,5 @@ export function MainContent() {
       <Skills />
       <Education />
     </main>
-  )
+  );
 }
